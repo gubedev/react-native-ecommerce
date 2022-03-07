@@ -27,7 +27,7 @@ export default function InputCount({ containerStyle }) {
           paddingLeft: scale(8),
           paddingRight: scale(8),
         }}>
-        <Feather name={'minus'} size={scale(20)} color={COLORS.primary} />
+        <Feather name={'minus'} size={scale(20)} color={COLORS.primary}  />
         <Label style={{ padding: scale(16) }} />
         <Feather name={'plus'} size={scale(20)} color={COLORS.primary} />
       </View>

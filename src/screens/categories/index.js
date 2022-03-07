@@ -37,6 +37,9 @@ const Categories = () => {
       </View>
     );
   };
+  const handleCountChange = (id, count) => {
+    console.log('count change ', id, count);
+  };
   return (
     <Container isScrollable style={styles.container}>
       <View>
@@ -96,7 +99,11 @@ const Categories = () => {
               )}
               data={products}
               renderItem={({ item, index }) => (
-                <ProductCard key={index} item={item} />
+                <ProductCard
+                  key={index}
+                  item={item}
+                  onCountChange={handleCountChange}
+                />
               )}
             />
           </View>
