@@ -1,15 +1,22 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { scale } from 'react-native-size-matters';
+import Feather from 'react-native-vector-icons/dist/Feather';
 import Button from 'components/button';
-
-const Counter = () => {
-  return <View style={{ display: 'flex' }}></View>;
-};
+import InputCount from 'components/input-count';
+import { COLORS } from 'utils/constants/colors';
 
 export default function ItemCount() {
   const [isShowingCount, setIsShowingCount] = React.useState(false);
   return isShowingCount === true ? (
-    <Counter />
+    <InputCount
+      IconLeft={
+        <Feather
+          name={'mouse-pointer'}
+          size={scale(20)}
+          color={COLORS.primary}
+        />
+      }
+    />
   ) : (
     <Button
       onPress={() => {
