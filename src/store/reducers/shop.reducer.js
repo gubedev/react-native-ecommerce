@@ -48,26 +48,3 @@ const shopReducer = (state = initialState, action) => {
 };
 
 export default shopReducer;
-
-// const shopReducer = (state = initialState, action) => {
-//   switch (action.type) {
-//     case SELECT_PRODUCT:
-//       return {
-//         ...state,
-//         selectedProduct: state.products.find(
-//           product => product.id === action.productId,
-//         ),
-//       };
-//     case SELECT_CATEGORY:
-//       console.log('action', action.payload);
-//       return {
-//         ...state,
-//         filteredProducts: state.products.filter(
-//           product => product.category === action.payload.category.Id,
-//         ),
-//         selectedCategory: action.payload.category,
-//       };
-//     default:
-//       return state;
-//   }
-// };

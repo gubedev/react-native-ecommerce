@@ -1,5 +1,5 @@
 import React from 'react';
-import { View } from 'react-native';
+import { Pressable, View } from 'react-native';
 import { scale } from 'react-native-size-matters';
 import Feather from 'react-native-vector-icons/dist/Feather';
 import { COLORS } from 'utils/constants/colors';
@@ -7,18 +7,10 @@ import Label from 'components/label';
 
 import styles from './styles';
 
-export default function InputCount({ containerStyle }) {
-  const [focused, setFocused] = React.useState(false);
-  const onFocus = () => {
-    setFocused(!focused);
-  };
+export default function InputCount({ containerStyle, itemId, onCountChange }) {
+  const [quantity, setQuantity] = React.useState(1);
   return (
-    <View
-      style={[
-        styles.container,
-        containerStyle,
-        focused ? styles.activeBorder : styles.blurBorder,
-      ]}>
+    <View style={[styles.container, containerStyle, styles.blurBorder]}>
       <View
         style={{
           flexDirection: 'row',
@@ -27,9 +19,23 @@ export default function InputCount({ containerStyle }) {
           paddingLeft: scale(8),
           paddingRight: scale(8),
         }}>
-        <Feather name={'minus'} size={scale(20)} color={COLORS.primary}  />
-        <Label style={{ padding: scale(16) }} />
-        <Feather name={'plus'} size={scale(20)} color={COLORS.primary} />
+        <Pressable
+          onPress={() => {
+            if (quantity > 0) {
+              setQuantity(quantity - 1);
+              onCountChange(itemId, -1);
+            }
+          }}>
+          <Feather name={'minus'} size={scale(20)} color={COLORS.primary} />
+        </Pressable>
+        <Label style={{ padding: scale(16) }} text={quantity} />
+        <Pressable
+          onPress={() => {
+            setQuantity(quantity + 1);
+            onCountChange(itemId, 1);
+          }}>
+          <Feather name={'plus'} size={scale(20)} color={COLORS.primary} />
+        </Pressable>
       </View>
     </View>
   );
