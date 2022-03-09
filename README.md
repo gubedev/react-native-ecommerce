@@ -1,9 +1,9 @@
 # react-native-native-ecommerce
  Proyecto Final Curso React Native
 
-![screenshot](https://github.com/gubedev/react-native-ecommerce/blob/master/docs/print-01.png)
-![screenshot](https://github.com/gubedev/react-native-ecommerce/blob/master/docs/print-02.png)
-![screenshot](https://github.com/gubedev/react-native-ecommerce/blob/master/docs/print-03.png)
+![screenshot](https://github.com/gubedev/react-native-ecommerce/blob/feature/02/add-item-to-cart/docs/print-01.png)
+![screenshot](https://github.com/gubedev/react-native-ecommerce/blob/feature/02/add-item-to-cart/docs/print-02.png)
+![screenshot](https://github.com/gubedev/react-native-ecommerce/blob/feature/02/add-item-to-cart/docs/print-03.png)
 
 ## Comenzando 🚀
 
