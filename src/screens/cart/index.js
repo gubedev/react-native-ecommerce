@@ -5,7 +5,8 @@ import { scale } from 'react-native-size-matters';
 import Container from 'components/container';
 import Title from 'components/title';
 import ProductCard from 'components/product-card';
-import { updateCartItem } from 'store/actions/cart.action';
+import Button from 'components/button';
+import { updateCartItem, cleanupCart } from 'store/actions/cart.action';
 import styles from './styles';
 
 const Cart = () => {
@@ -16,6 +17,15 @@ const Cart = () => {
   };
   const handleCountChange = (item, quantity) => {
     dispatch(updateCartItem(item, quantity));
+  };
+  const sumTotal = items =>
+    items.map(item => item.quantity * item.price).reduce((a, b) => a + b, 0);
+
+  const handleCleanup = () => {
+    dispatch(cleanupCart());
+  };
+  const handleEnd = () => {
+    dispatch(cleanupCart());
   };
   return (
     <Container isScrollable style={styles.container}>
@@ -38,6 +48,16 @@ const Cart = () => {
           )}
         />
       </View>
+      <View style={{ marginTop: scale(16) }}>
+        <RenderTitle heading="Total" />
+        <RenderTitle heading={`$ ${sumTotal(items)}`} />
+      </View>
+      {items.length > 0 && (
+        <View style={{ marginTop: scale(16) }}>
+          <Button onPress={handleEnd} label="FINALIZAR" />
+          <Button onPress={handleCleanup} label="VACIAR" />
+        </View>
+      )}
     </Container>
   );
 };

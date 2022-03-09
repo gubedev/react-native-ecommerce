@@ -1,4 +1,5 @@
 import { UPDATE_ITEM_QUANTITY } from 'store/actions/cart.action';
+import { CLEANUP_CART } from '../actions/cart.action';
 
 const initialState = {
   items: [],
@@ -19,11 +20,15 @@ const cartReducer = (state = initialState, action) => {
           )
         : [...items, { ...action.payload }];
 
-        console.log(updatedItems);
-      
-        return {
+      return {
         ...state,
         items: updatedItems,
+      };
+
+    case CLEANUP_CART:
+      return {
+        ...state,
+        items: [],
       };
 
     default:
