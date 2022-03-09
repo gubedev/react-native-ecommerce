@@ -2,45 +2,32 @@ const products = [
   {
     category: '1',
     id: 'MLA832761830',
-    title: 'Repetidor TP-Link TL-WA850RE',
-    description:
-      'Señal amplificada.El repetidor wifi TP-Link TL-WA850RE te va a permitir disfrutar de la conexión en una mayor cantidad de espacios. Este aparato extiende el rango de la señal para que puedas disfrutar de todos los equipos electrónicos de tu hogar o tu oficina sin inconvenientes.',
-    price: 2175,
+    title: 'Azzaro By Night Spray EDP 150 ml',
+    description: 'Azzaro By Night Spray EDP 150 ml para hombre.',
+    price: 12800,
     image:
-      'https://http2.mlstatic.com/D_NQ_NP_668117-MLA31786420833_082019-O.webp',
+      'https://http2.mlstatic.com/D_NQ_NP_735461-MLA48462221617_122021-O.webp',
     isNew: false,
   },
   {
     category: '1',
     id: 'MLA832761831',
-    title: 'Repetidor TP-Link TL-WA850RE',
-    description:
-      'Señal amplificada.El repetidor wifi TP-Link TL-WA850RE te va a permitir disfrutar de la conexión en una mayor cantidad de espacios. Este aparato extiende el rango de la señal para que puedas disfrutar de todos los equipos electrónicos de tu hogar o tu oficina sin inconvenientes.',
-    price: 2175,
+    title: 'Antonio Banderas Blue Seduction EDT 100 ml',
+    description: 'Antonio Banderas Blue Seduction EDT 100 ml para hombre.',
+    price: 14000,
     image:
-      'https://http2.mlstatic.com/D_NQ_NP_668117-MLA31786420833_082019-O.webp',
+      'https://http2.mlstatic.com/D_NQ_NP_2X_727640-MLA45374756022_032021-F.webp',
     isNew: false,
   },
   {
     category: '2',
     id: 'MLA832761832',
-    title: 'Repetidor TP-Link TL-WA850RE',
+    title: 'Cartera bandolera PM',
     description:
-      'Señal amplificada.El repetidor wifi TP-Link TL-WA850RE te va a permitir disfrutar de la conexión en una mayor cantidad de espacios. Este aparato extiende el rango de la señal para que puedas disfrutar de todos los equipos electrónicos de tu hogar o tu oficina sin inconvenientes.',
-    price: 2175,
+      'Cartera bandolera PM Complementos  Morral  diseño liso de cuero sintético',
+    price: 6500,
     image:
-      'https://http2.mlstatic.com/D_NQ_NP_668117-MLA31786420833_082019-O.webp',
-    isNew: false,
-  },
-  {
-    category: '1',
-    id: 'MLA832761833',
-    title: 'Repetidor TP-Link TL-WA850RE',
-    description:
-      'Señal amplificada.El repetidor wifi TP-Link TL-WA850RE te va a permitir disfrutar de la conexión en una mayor cantidad de espacios. Este aparato extiende el rango de la señal para que puedas disfrutar de todos los equipos electrónicos de tu hogar o tu oficina sin inconvenientes.',
-    price: 2175,
-    image:
-      'https://http2.mlstatic.com/D_NQ_NP_668117-MLA31786420833_082019-O.webp',
+      'https://http2.mlstatic.com/D_NQ_NP_979391-MLA48395071215_112021-O.webp',
     isNew: false,
   },
 ];
