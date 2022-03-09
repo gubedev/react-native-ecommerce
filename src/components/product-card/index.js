@@ -5,8 +5,14 @@ import { COLORS } from 'utils/constants/colors';
 import Label from 'components/label';
 import ItemCount from 'components/item-count';
 
-export default function ProductCard({ navigation, item, onCountChange }) {
-  const { title, description, price, image, isNew } = item;
+export default function ProductCard({
+  navigation,
+  item,
+  onCountChange,
+  showCount = false,
+  initial = 1,
+}) {
+  const { title, description, price, image } = item;
   return (
     <View style={{ display: 'flex', flexDirection: 'row' }}>
       <Image
@@ -46,7 +52,12 @@ export default function ProductCard({ navigation, item, onCountChange }) {
           />
         </View>
         <View>
-          <ItemCount onCountChange={onCountChange} item={item} />
+          <ItemCount
+            onCountChange={onCountChange}
+            item={item}
+            showCount={showCount}
+            initial={initial}
+          />
         </View>
       </View>
     </View>

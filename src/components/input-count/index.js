@@ -7,8 +7,13 @@ import Label from 'components/label';
 
 import styles from './styles';
 
-export default function InputCount({ containerStyle, item, onCountChange }) {
-  const [quantity, setQuantity] = React.useState(1);
+export default function InputCount({
+  containerStyle,
+  item,
+  onCountChange,
+  initial,
+}) {
+  const [quantity, setQuantity] = React.useState(initial);
   return (
     <View style={[styles.container, containerStyle, styles.blurBorder]}>
       <View

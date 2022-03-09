@@ -2,10 +2,15 @@ import React from 'react';
 import Button from 'components/button';
 import InputCount from 'components/input-count';
 
-export default function ItemCount({ onCountChange, item }) {
-  const [isShowingCount, setIsShowingCount] = React.useState(false);
+export default function ItemCount({
+  onCountChange,
+  item,
+  showCount = false,
+  initial,
+}) {
+  const [isShowingCount, setIsShowingCount] = React.useState(showCount);
   return isShowingCount === true ? (
-    <InputCount onCountChange={onCountChange} item={item} />
+    <InputCount onCountChange={onCountChange} item={item} initial={initial} />
   ) : (
     <Button
       onPress={() => {
