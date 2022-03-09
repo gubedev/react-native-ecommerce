@@ -1,14 +1,13 @@
 import { getFirestore, getAuth } from "./firebase"
-import firebase from "firebase/app"
 import "@firebase/firestore"
 
-export const requestProducts = async categoryId => {
+export const requestProducts = async category => {
   const db = getFirestore()
   const itemsCollection = db.collection("items")
 
-  if (categoryId) {
+  if (category) {
     return itemsCollection
-      .where("categoryId", "==", categoryId)
+      .where("category", "==", category)
       .get()
       .then(querySnapshot =>
         querySnapshot.docs.map(doc => {
