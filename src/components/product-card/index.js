@@ -46,7 +46,7 @@ export default function ProductCard({ navigation, item, onCountChange }) {
           />
         </View>
         <View>
-          <ItemCount onCountChange={onCountChange} itemId={item.id} />
+          <ItemCount onCountChange={onCountChange} item={item} />
         </View>
       </View>
     </View>

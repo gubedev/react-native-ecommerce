@@ -7,7 +7,7 @@ import Label from 'components/label';
 
 import styles from './styles';
 
-export default function InputCount({ containerStyle, itemId, onCountChange }) {
+export default function InputCount({ containerStyle, item, onCountChange }) {
   const [quantity, setQuantity] = React.useState(1);
   return (
     <View style={[styles.container, containerStyle, styles.blurBorder]}>
@@ -23,7 +23,7 @@ export default function InputCount({ containerStyle, itemId, onCountChange }) {
           onPress={() => {
             if (quantity > 0) {
               setQuantity(quantity - 1);
-              onCountChange(itemId, -1);
+              onCountChange(item, -1);
             }
           }}>
           <Feather name={'minus'} size={scale(20)} color={COLORS.primary} />
@@ -32,7 +32,7 @@ export default function InputCount({ containerStyle, itemId, onCountChange }) {
         <Pressable
           onPress={() => {
             setQuantity(quantity + 1);
-            onCountChange(itemId, 1);
+            onCountChange(item, 1);
           }}>
           <Feather name={'plus'} size={scale(20)} color={COLORS.primary} />
         </Pressable>

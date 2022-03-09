@@ -10,6 +10,7 @@ import ProductCard from 'components/product-card';
 import { COLORS, SHADOW } from 'utils/constants/colors';
 import { CATEGORIES } from 'utils/data/categories';
 import { selectCategory, fetchProducts } from 'store/actions/shop.action';
+import { updateCartItem } from 'store/actions/cart.action';
 import { DEFAULT_CATEGORY } from 'store/reducers/shop.reducer';
 
 import styles from './styles';
@@ -37,8 +38,8 @@ const Categories = () => {
       </View>
     );
   };
-  const handleCountChange = (id, count) => {
-    console.log('count change ', id, count);
+  const handleCountChange = (item, quantity) => {
+    dispatch(updateCartItem(item, quantity));
   };
   return (
     <Container isScrollable style={styles.container}>
