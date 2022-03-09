@@ -1,22 +1,27 @@
 # react-native-native-ecommerce
  Proyecto Final Curso React Native
+
+![screenshot](https://github.com/gubedev/react-native-ecommerce/blob/master/docs/print-01.png)
+![screenshot](https://github.com/gubedev/react-native-ecommerce/blob/master/docs/print-02.png)
+![screenshot](https://github.com/gubedev/react-native-ecommerce/blob/master/docs/print-03.png)
+
 ## Comenzando 🚀
 
-La aplicación consiste de un frontend en ReactJs soportado por Firebase como backend.
+La aplicación consiste de una app utilizando React Native soportado por Firebase como backend.
 
-Para la creación del proyecto ReactJs se utilizo create-react-app (CLI oficial de React, desarrollado por Facebook). 
+Para la creación del proyecto ReactJs se utilizo React Native CLI. 
 
-### Env Variables 📋
+### Variables 📋
 
 Configure los valores de firebase corerspondientes de su cuenta.
 
 ```
-REACT_APP_APIKEY =
-REACT_APP_AUTHDOMAIN = 
-REACT_APP_PROJECTID = 
-REACT_APP_STORAGEBUCKET = 
-REACT_APP_MESSAGINGSENDERID = 
-REACT_APP_APPID = 
+APIKEY =
+AUTHDOMAIN = 
+PROJECTID = 
+STORAGEBUCKET = 
+MESSAGINGSENDERID = 
+APPID = 
 ```
 
 ## Autor ✒️
